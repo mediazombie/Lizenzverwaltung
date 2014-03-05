@@ -15,13 +15,45 @@ namespace NetzwerkInventur
         public frmMain()
         {
             InitializeComponent();
+            Load += new EventHandler(frmMain_Load);
         }
 
-        private void Form1_Load(object sender, System.EventArgs e)
+        private void frmMain_Load(object sender, System.EventArgs e)
         {
-            System.Windows.Forms.ToolTip ToolTipDuplikate = new System.Windows.Forms.ToolTip();
-            ToolTipDuplikate.SetToolTip(this.checkBoxDuplikateEdit, "Hello");
+            ToolTip ToolTipHandler = new ToolTip();
+
+            ToolTipHandler.AutoPopDelay = 5000;
+            ToolTipHandler.InitialDelay = 500;
+            ToolTipHandler.ReshowDelay = 500;
+
+            ToolTipHandler.SetToolTip(this.textBoxSuchbegriffFiltern, "Hier einen Suchbegriff eingeben." + Environment.NewLine + "Kann Seriennummer, WS-Name, Softwarebezeichnung usw. sein.");
+            ToolTipHandler.SetToolTip(this.checkBoxDuplikateFiltern, "Hebt doppelt vergebene Seriennummern hervor.");
+            ToolTipHandler.SetToolTip(this.textBoxSuchbegriffEdit, "Hier einen Suchbegriff eingeben." + Environment.NewLine + "Kann Seriennummer, WS-Name, Softwarebezeichnung usw. sein.");
+            ToolTipHandler.SetToolTip(this.checkBoxDuplikateEdit, "Zeigt doppelt vergebene Seriennummern an.");
         }
-       
+
+        private void btnNewUser_Click(object sender, EventArgs e)
+        {
+            this.pnlNewUser.Visible = true;
+            this.pnlNewWorkstation.Visible = false;
+            this.pnlNewSWLicense.Visible = false;
+        }
+
+        private void btnNewWorkstation_Click(object sender, EventArgs e)
+        {
+            this.pnlNewUser.Visible = false;
+            this.pnlNewWorkstation.Visible = true;
+            this.pnlNewSWLicense.Visible = false;
+        }
+
+        private void btnNewSWLicense_Click(object sender, EventArgs e)
+        {
+            this.pnlNewUser.Visible = false;
+            this.pnlNewWorkstation.Visible = false;
+            this.pnlNewSWLicense.Visible = true;
+        }
+
+
+
     }
 }

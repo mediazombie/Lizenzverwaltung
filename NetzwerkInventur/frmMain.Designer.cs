@@ -54,13 +54,28 @@
             this.lblAusgabeEdit = new System.Windows.Forms.Label();
             this.datatblAusgabeEdit = new System.Windows.Forms.DataGridView();
             this.tabNew = new System.Windows.Forms.TabPage();
-            this.toolTipDuplikate = new System.Windows.Forms.ToolTip(this.components);
+            this.pnlNewUser = new System.Windows.Forms.Panel();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.btnNewSWLicense = new System.Windows.Forms.Button();
+            this.btnNewWorkstation = new System.Windows.Forms.Button();
+            this.btnNewUser = new System.Windows.Forms.Button();
+            this.toolTipHandler = new System.Windows.Forms.ToolTip(this.components);
+            this.pnlNewWorkstation = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
+            this.pnlNewSWLicense = new System.Windows.Forms.Panel();
+            this.label4 = new System.Windows.Forms.Label();
             this.tabControl.SuspendLayout();
             this.tabFilter.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.datatblAusgabeFiltern)).BeginInit();
             this.groupBoxFilterPara.SuspendLayout();
             this.tabEdit.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.datatblAusgabeEdit)).BeginInit();
+            this.tabNew.SuspendLayout();
+            this.pnlNewUser.SuspendLayout();
+            this.pnlNewWorkstation.SuspendLayout();
+            this.pnlNewSWLicense.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl
@@ -297,6 +312,12 @@
             // 
             // tabNew
             // 
+            this.tabNew.Controls.Add(this.pnlNewSWLicense);
+            this.tabNew.Controls.Add(this.pnlNewWorkstation);
+            this.tabNew.Controls.Add(this.pnlNewUser);
+            this.tabNew.Controls.Add(this.btnNewSWLicense);
+            this.tabNew.Controls.Add(this.btnNewWorkstation);
+            this.tabNew.Controls.Add(this.btnNewUser);
             this.tabNew.Location = new System.Drawing.Point(4, 22);
             this.tabNew.Name = "tabNew";
             this.tabNew.Padding = new System.Windows.Forms.Padding(3);
@@ -304,6 +325,115 @@
             this.tabNew.TabIndex = 2;
             this.tabNew.Text = "Erfassen";
             this.tabNew.UseVisualStyleBackColor = true;
+            // 
+            // pnlNewUser
+            // 
+            this.pnlNewUser.BackColor = System.Drawing.Color.LightGray;
+            this.pnlNewUser.Controls.Add(this.comboBox1);
+            this.pnlNewUser.Controls.Add(this.label2);
+            this.pnlNewUser.Controls.Add(this.label1);
+            this.pnlNewUser.Location = new System.Drawing.Point(295, 55);
+            this.pnlNewUser.Name = "pnlNewUser";
+            this.pnlNewUser.Size = new System.Drawing.Size(570, 363);
+            this.pnlNewUser.TabIndex = 3;
+            this.pnlNewUser.Visible = false;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(107, 48);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 21);
+            this.comboBox1.TabIndex = 1;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(38, 51);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(35, 13);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "label1";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(38, 11);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(113, 13);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Benutzer erfassen:";
+            // 
+            // btnNewSWLicense
+            // 
+            this.btnNewSWLicense.Location = new System.Drawing.Point(45, 174);
+            this.btnNewSWLicense.Name = "btnNewSWLicense";
+            this.btnNewSWLicense.Size = new System.Drawing.Size(160, 23);
+            this.btnNewSWLicense.TabIndex = 2;
+            this.btnNewSWLicense.Text = "Software Lizenz erfassen";
+            this.btnNewSWLicense.UseVisualStyleBackColor = true;
+            this.btnNewSWLicense.Click += new System.EventHandler(this.btnNewSWLicense_Click);
+            // 
+            // btnNewWorkstation
+            // 
+            this.btnNewWorkstation.Location = new System.Drawing.Point(45, 115);
+            this.btnNewWorkstation.Name = "btnNewWorkstation";
+            this.btnNewWorkstation.Size = new System.Drawing.Size(160, 23);
+            this.btnNewWorkstation.TabIndex = 1;
+            this.btnNewWorkstation.Text = "Workstation erfassen";
+            this.btnNewWorkstation.UseVisualStyleBackColor = true;
+            this.btnNewWorkstation.Click += new System.EventHandler(this.btnNewWorkstation_Click);
+            // 
+            // btnNewUser
+            // 
+            this.btnNewUser.Location = new System.Drawing.Point(45, 56);
+            this.btnNewUser.Name = "btnNewUser";
+            this.btnNewUser.Size = new System.Drawing.Size(160, 23);
+            this.btnNewUser.TabIndex = 0;
+            this.btnNewUser.Text = "Benutzer erfassen";
+            this.btnNewUser.UseVisualStyleBackColor = true;
+            this.btnNewUser.Click += new System.EventHandler(this.btnNewUser_Click);
+            // 
+            // pnlNewWorkstation
+            // 
+            this.pnlNewWorkstation.BackColor = System.Drawing.Color.LightGray;
+            this.pnlNewWorkstation.Controls.Add(this.label3);
+            this.pnlNewWorkstation.Location = new System.Drawing.Point(295, 55);
+            this.pnlNewWorkstation.Name = "pnlNewWorkstation";
+            this.pnlNewWorkstation.Size = new System.Drawing.Size(570, 363);
+            this.pnlNewWorkstation.TabIndex = 4;
+            this.pnlNewWorkstation.Visible = false;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(38, 11);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(131, 13);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "Workstation erfassen:";
+            // 
+            // pnlNewSWLicense
+            // 
+            this.pnlNewSWLicense.BackColor = System.Drawing.Color.LightGray;
+            this.pnlNewSWLicense.Controls.Add(this.label4);
+            this.pnlNewSWLicense.Location = new System.Drawing.Point(295, 55);
+            this.pnlNewSWLicense.Name = "pnlNewSWLicense";
+            this.pnlNewSWLicense.Size = new System.Drawing.Size(570, 363);
+            this.pnlNewSWLicense.TabIndex = 5;
+            this.pnlNewSWLicense.Visible = false;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(38, 11);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(153, 13);
+            this.label4.TabIndex = 0;
+            this.label4.Text = "Software Lizenz erfassen:";
             // 
             // frmMain
             // 
@@ -322,6 +452,13 @@
             this.tabEdit.ResumeLayout(false);
             this.tabEdit.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.datatblAusgabeEdit)).EndInit();
+            this.tabNew.ResumeLayout(false);
+            this.pnlNewUser.ResumeLayout(false);
+            this.pnlNewUser.PerformLayout();
+            this.pnlNewWorkstation.ResumeLayout(false);
+            this.pnlNewWorkstation.PerformLayout();
+            this.pnlNewSWLicense.ResumeLayout(false);
+            this.pnlNewSWLicense.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -353,7 +490,18 @@
         private System.Windows.Forms.TextBox textBoxSuchbegriffEdit;
         private System.Windows.Forms.Label lblAusgabeEdit;
         private System.Windows.Forms.DataGridView datatblAusgabeEdit;
-        private System.Windows.Forms.ToolTip toolTipDuplikate;
+        private System.Windows.Forms.ToolTip toolTipHandler;
+        private System.Windows.Forms.Button btnNewSWLicense;
+        private System.Windows.Forms.Button btnNewWorkstation;
+        private System.Windows.Forms.Button btnNewUser;
+        private System.Windows.Forms.Panel pnlNewUser;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Panel pnlNewWorkstation;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Panel pnlNewSWLicense;
+        private System.Windows.Forms.Label label4;
     }
 }
 
